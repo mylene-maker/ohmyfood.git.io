@@ -1,0 +1,430 @@
+/* Media query smartphone*/
+/* Media query tablette*/
+/* Media query desktop*/
+.element_central {
+  text-align: center;
+}
+
+@media (min-width: 320px) {
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 20px;
+    padding-right: 20%;
+  }
+  header img {
+    width: 60%;
+  }
+  header i {
+    font-size: 1rem;
+    margin-top: 8px;
+    margin-left: -40px;
+    color: black;
+  }
+  body {
+    font-family: "Roboto", sans-serif;
+    margin: auto;
+  }
+  body .illustration {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+  }
+  body a {
+    text-decoration: none;
+  }
+  section {
+    background-color: #f6f6f6;
+    border-radius: 25px 25px 0px 0px;
+    position: relative;
+    margin-top: -15%;
+  }
+  section .name-restaurant {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-top: 20px;
+  }
+  section .name-restaurant .contenair-heart .like {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    opacity: 0.7;
+    z-index: -1;
+  }
+  section .name-restaurant .contenair-heart .like1 {
+    font-size: 1.8rem;
+    margin-left: -30px;
+    color: white;
+    position: relative;
+    opacity: 0;
+    z-index: 1;
+  }
+  section .name-restaurant .contenair-heart .like1:hover {
+    opacity: 1;
+    color: #b659be;
+    cursor: pointer;
+  }
+  section h2 {
+    margin-left: -5%;
+    font-family: "Shrikhand", cursive;
+  }
+  section .underline {
+    width: 40px;
+    height: 3px;
+    background-color: #99e2d0;
+    margin-top: -15px;
+    margin-bottom: 20px;
+  }
+  section h4 {
+    margin-top: 0px;
+    font-family: sans-serif, Arial, Helvetica;
+  }
+  section h5 {
+    margin-bottom: 0px;
+  }
+  .card {
+    margin-left: 10px;
+    margin-bottom: 50px;
+  }
+  .card .box {
+    border-radius: 15px;
+    background-color: white;
+    -webkit-box-shadow: 2px 5px 5px -2px #dddddd;
+            box-shadow: 2px 5px 5px -2px #dddddd;
+    margin-bottom: 15px;
+    padding: 10px;
+    padding-bottom: 10px;
+    width: 90%;
+    height: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .card .box:hover {
+    cursor: pointer;
+  }
+  .card .box:hover .check {
+    display: block;
+  }
+  .card .box:hover .price {
+    -webkit-animation: slide-price 0.5s forwards;
+            animation: slide-price 0.5s forwards;
+  }
+  .card .box:hover h5 {
+    width: 80%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .card .title-dish {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .card .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: -35px;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .card .info .price {
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-right: -100px;
+  }
+  .card .check {
+    font-size: 1.3rem;
+    color: white;
+    background-color: #99e2d0;
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+    grid-row-end: 2;
+    margin: auto;
+    margin-top: -10px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    border-radius: 0px 15px 15px 0px;
+    height: 100%;
+    padding-top: 23px;
+    padding-bottom: 1px;
+    padding-right: 17px;
+    padding-left: 25px;
+    display: none;
+    /*animation apparition check*/
+    -webkit-animation: slide 0.5s ease-in-out;
+            animation: slide 0.5s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .card .fa-check-circle {
+    -webkit-animation: turn 0.5s ease-in-out;
+            animation: turn 0.5s ease-in-out;
+  }
+  @-webkit-keyframes slide {
+    from {
+      margin-left: 90%;
+    }
+    to {
+      margin-left: 57%;
+    }
+    /* Fin animation apparition check*/
+  }
+  @keyframes slide {
+    from {
+      margin-left: 90%;
+    }
+    to {
+      margin-left: 57%;
+    }
+    /* Fin animation apparition check*/
+  }
+  /* animation rotation check*/
+  @-webkit-keyframes turn {
+    to {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    from {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes turn {
+    to {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    from {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  /* fin animation rotation check*/
+  /* faire glisser le prix vers la gauche pendant l'apparition du check */
+  @-webkit-keyframes slide-price {
+    to {
+      -webkit-transform: translateX(-220%);
+              transform: translateX(-220%);
+    }
+    from {
+    }
+  }
+  @keyframes slide-price {
+    to {
+      -webkit-transform: translateX(-220%);
+              transform: translateX(-220%);
+    }
+    from {
+    }
+  }
+  .btn {
+    width: 50%;
+    border-style: hidden;
+    border-radius: 30px;
+    margin-left: 20%;
+    padding: 15px;
+    margin-bottom: 40px;
+    color: white;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+    background: linear-gradient(#ff79da, #9356dc);
+  }
+  .btn:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#ed88e0), to(#a16be0));
+    background: linear-gradient(#ed88e0, #a16be0);
+  }
+  footer {
+    width: 100%;
+    background-color: #2e2727;
+    color: white;
+  }
+  footer h3 {
+    padding: 40px;
+    margin-bottom: -30px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    font-family: "Shrikhand", cursive;
+  }
+  footer li {
+    list-style-type: none;
+    line-height: 25px;
+  }
+  footer a {
+    color: white;
+  }
+  footer i {
+    margin-right: 10px;
+  }
+}
+
+/*animation de la carte au chargement de la page*/
+.card__1 {
+  -webkit-animation: cascade 1s ease-in-out;
+          animation: cascade 1s ease-in-out;
+}
+
+.card__2 {
+  -webkit-animation: cascade 1s ease-in-out;
+          animation: cascade 1s ease-in-out;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.card__3 {
+  -webkit-animation: cascade 1s ease-in-out;
+          animation: cascade 1s ease-in-out;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes cascade {
+  from {
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes cascade {
+  from {
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/*Version tablette*/
+@media (min-width: 767px) {
+  header i {
+    margin-top: 25px;
+  }
+  .name-restaurant {
+    padding-top: 40px;
+  }
+  footer {
+    text-align: center;
+  }
+  footer h3 {
+    margin-left: 30px;
+  }
+  .choix {
+    max-width: 100%;
+  }
+  .card {
+    margin-left: 30px;
+  }
+  .btn {
+    margin-left: 25%;
+  }
+  @-webkit-keyframes slide {
+    0% {
+      margin-left: 100%;
+    }
+    100% {
+      margin-left: 76%;
+    }
+  }
+  @keyframes slide {
+    0% {
+      margin-left: 100%;
+    }
+    100% {
+      margin-left: 76%;
+    }
+  }
+}
+
+/*Version desktop*/
+@media (min-width: 1024px) {
+  header {
+    width: 40%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-left: 25%;
+  }
+  header i {
+    margin-top: 25px;
+  }
+  main img {
+    height: 400px;
+  }
+  section {
+    margin-top: -70px;
+  }
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 100%;
+  }
+  .card .card__1 {
+    margin-left: -20px;
+    width: 40%;
+  }
+  .card .card__2,
+  .card .card__3 {
+    margin-left: 10px;
+    width: 40%;
+  }
+  .card .box {
+    max-width: 100%;
+  }
+  .card .price {
+    padding-right: 10px;
+  }
+  @-webkit-keyframes slide {
+    from {
+      margin-left: 70%;
+    }
+    to {
+      margin-left: 50%;
+    }
+  }
+  @keyframes slide {
+    from {
+      margin-left: 70%;
+    }
+    to {
+      margin-left: 50%;
+    }
+  }
+  .btn {
+    margin-left: 27%;
+  }
+  footer {
+    margin-bottom: 0%;
+  }
+}
+/*# sourceMappingURL=fichier2.css.map */

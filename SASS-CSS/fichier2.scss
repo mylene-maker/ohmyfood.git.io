@@ -1,0 +1,389 @@
+$couleurprimaire: #9356dc;
+$couleursecondaire: #ff79da;
+$couleurterciaire: #99e2d0;
+$couleurfond: #f6f6f6;
+$ombres-box: #dddddd;
+$border: 1px solid white;
+
+/* Media query smartphone*/
+
+$breackpoint: 320px;
+$media-mobile: only screen and
+  (
+    min-width: $breackpoint,
+  );
+
+/* Media query tablette*/
+$breackpoint-2: 767px;
+$media-tablette: only screen and
+  (
+    min-width: $breackpoint-2,
+  );
+
+/* Media query desktop*/
+$breackpoint-3: 1024px;
+$media-desktop: only screen and
+  (
+    min-width: $breackpoint-3,
+  );
+
+.element_central {
+  text-align: center;
+}
+
+@media #{$media-mobile} {
+  header {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    padding-right: 20%;
+
+    img {
+      width: 60%;
+    }
+    i {
+      font-size: 1rem;
+      margin-top: 8px;
+      margin-left: -40px;
+      color: black;
+    }
+  }
+  body {
+    font-family: "Roboto", sans-serif;
+    margin: auto;
+
+    .illustration {
+      object-fit: cover;
+      width: 100%;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+
+  section {
+    background-color: $couleurfond;
+    border-radius: 25px 25px 0px 0px;
+    position: relative;
+    margin-top: -15%;
+
+    .name-restaurant {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 20px;
+
+      .contenair-heart {
+        .like {
+          font-size: 1.8rem;
+          margin-top: 20px;
+          opacity: 0.7;
+          z-index: -1;
+        }
+        .like1 {
+          font-size: 1.8rem;
+          margin-left: -30px;
+          color: white;
+          position: relative;
+          opacity: 0;
+          z-index: 1;
+
+          &:hover {
+            opacity: 1;
+            color: rgb(182, 89, 190);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    h2 {
+      margin-left: -5%;
+      font-family: "Shrikhand", cursive;
+    }
+
+    .underline {
+      width: 40px;
+      height: 3px;
+      background-color: $couleurterciaire;
+      margin-top: -15px;
+      margin-bottom: 20px;
+    }
+    h4 {
+      margin-top: 0px;
+      font-family: sans-serif, Arial, Helvetica;
+    }
+    h5 {
+      margin-bottom: 0px;
+    }
+  }
+
+  .card {
+    margin-left: 10px;
+    margin-bottom: 50px;
+
+    .box {
+      border-radius: 15px;
+      background-color: white;
+      box-shadow: 2px 5px 5px -2px $ombres-box;
+      margin-bottom: 15px;
+      padding: 10px;
+      padding-bottom: 10px;
+      width: 90%;
+      height: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      &:hover {
+        cursor: pointer;
+      }
+      &:hover .check {
+        display: block;
+      }
+      &:hover .price {
+        animation: slide-price 0.5s forwards;
+      }
+      &:hover h5 {
+        width: 80%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+    .title-dish {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -35px;
+      grid-column-start: 1;
+      grid-column-end: 3;
+
+      .price {
+        margin-top: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        margin-right: -100px;
+      }
+    }
+    .check {
+      font-size: 1.3rem;
+      color: white;
+      background-color: $couleurterciaire;
+      grid-column-start: 3;
+      grid-row-end: 2;
+      margin: auto;
+      margin-top: -10px;
+      justify-content: flex-end;
+      border-radius: 0px 15px 15px 0px;
+      height: 100%;
+      padding-top: 23px;
+      padding-bottom: 1px;
+      padding-right: 17px;
+      padding-left: 25px;
+      display: none;
+
+      /*animation apparition check*/
+
+      animation: slide 0.5s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    .fa-check-circle {
+      animation: turn 0.5s ease-in-out;
+    }
+  }
+
+  @keyframes slide {
+    from {
+      margin-left: 90%;
+    }
+    to {
+      margin-left: 57%;
+    }
+    /* Fin animation apparition check*/
+  }
+
+  /* animation rotation check*/
+
+  @keyframes turn {
+    to {
+      transform: rotate(0deg);
+    }
+    from {
+      transform: rotate(360deg);
+    }
+  }
+  /* fin animation rotation check*/
+  /* faire glisser le prix vers la gauche pendant l'apparition du check */
+
+  @keyframes slide-price {
+    to {
+      transform: translateX(-220%);
+    }
+    from {
+    }
+  }
+
+  .btn {
+    width: 50%;
+    border-style: hidden;
+    border-radius: 30px;
+    margin-left: 20%;
+    padding: 15px;
+    margin-bottom: 40px;
+    color: white;
+    background: linear-gradient($couleursecondaire, $couleurprimaire);
+    &:hover {
+      background: linear-gradient(#ed88e0, #a16be0);
+    }
+  }
+
+  footer {
+    width: 100%;
+    background-color: rgb(46, 39, 39);
+    color: white;
+
+    h3 {
+      padding: 40px;
+      margin-bottom: -30px;
+      box-shadow: none;
+      font-family: "Shrikhand", cursive;
+    }
+
+    li {
+      list-style-type: none;
+      line-height: 25px;
+    }
+    a {
+      color: white;
+    }
+    i {
+      margin-right: 10px;
+    }
+  }
+}
+/*animation de la carte au chargement de la page*/
+.card__1 {
+  animation: cascade 1s ease-in-out;
+}
+.card__2 {
+  animation: cascade 1s ease-in-out;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.card__3 {
+  animation: cascade 1s ease-in-out;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes cascade {
+  from {
+    transform: translateY(4px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/*Version tablette*/
+
+@media #{$media-tablette} {
+  header {
+    i {
+      margin-top: 25px;
+    }
+  }
+  .name-restaurant {
+    padding-top: 40px;
+  }
+  footer {
+    text-align: center;
+
+    h3 {
+      margin-left: 30px;
+    }
+  }
+  .choix {
+    max-width: 100%;
+  }
+
+  .card {
+    margin-left: 30px;
+  }
+  .btn {
+    margin-left: 25%;
+  }
+
+  @keyframes slide {
+    0% {
+      margin-left: 100%;
+    }
+    100% {
+      margin-left: 76%;
+    }
+  }
+}
+
+/*Version desktop*/
+@media #{$media-desktop} {
+  header {
+    width: 40%;
+    justify-content: space-around;
+    margin-left: 25%;
+
+    i {
+      margin-top: 25px;
+    }
+  }
+  main {
+    img {
+      height: 400px;
+    }
+  }
+  section {
+    margin-top: -70px;
+  }
+  .card {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+
+    .card__1 {
+      margin-left: -20px;
+      width: 40%;
+    }
+    .card__2,
+    .card__3 {
+      margin-left: 10px;
+      width: 40%;
+    }
+    .box {
+      max-width: 100%;
+    }
+    .price {
+      padding-right: 10px;
+    }
+  }
+  @keyframes slide {
+    from {
+      margin-left: 70%;
+    }
+    to {
+      margin-left: 50%;
+    }
+  }
+
+  .btn {
+    margin-left: 27%;
+  }
+  footer {
+    margin-bottom: 0%;
+  }
+}

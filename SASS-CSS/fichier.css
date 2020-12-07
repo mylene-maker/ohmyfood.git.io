@@ -1,0 +1,368 @@
+/* Media query smarthpone*/
+/* Media query tablette*/
+/* Media query desktop*/
+.element_central {
+  text-align: center;
+}
+
+@media (min-width: 320px) {
+  body {
+    width: 100%;
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+  }
+  body img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  body a {
+    text-decoration: none;
+    color: black;
+  }
+  body h2 {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  body h3 {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  body h4 {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  header img {
+    width: 50%;
+    padding: 20px;
+  }
+  .map {
+    background-color: #dddddd;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: -10px;
+    margin: 0px;
+    padding: 20px;
+    -webkit-box-shadow: inset 0 3px 5px -5px #2c2c2c;
+            box-shadow: inset 0 3px 5px -5px #2c2c2c;
+  }
+  .map i {
+    margin-right: 20px;
+  }
+  .presentation {
+    background-color: #f6f6f6;
+    padding: 20px;
+    position: relative;
+  }
+  .presentation button {
+    border: 1px solid white;
+    border-radius: 40px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+    background: linear-gradient(#9356dc, #ff79da);
+    color: white;
+    padding: 20px;
+  }
+  .presentation button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#ed88e0), to(#a16be0));
+    background: linear-gradient(#ed88e0, #a16be0);
+  }
+  .contenair_fonctionnement {
+    margin-left: 10px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+  .etapes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .Fonctionnement {
+    border: 1px solid white;
+    border-radius: 20px;
+    -webkit-box-shadow: 2px 2px 5px 2px #dddddd;
+            box-shadow: 2px 2px 5px 2px #dddddd;
+    background-color: #f6f6f6;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 82%;
+    padding: 20px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  .Fonctionnement:hover {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(201, 171, 238, 0.2)), to(rgba(147, 86, 220, 0.2)));
+    background-image: linear-gradient(to right, rgba(201, 171, 238, 0.2), rgba(147, 86, 220, 0.2));
+  }
+  .Fonctionnement:hover i {
+    color: #9356dc;
+  }
+  .Fonctionnement .numero {
+    border: 1px solid white;
+    border-radius: 50px;
+    background-color: #9356dc;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    margin-left: -35px;
+    margin-top: -3px;
+  }
+  .Fonctionnement i {
+    color: gray;
+    font-size: 1.2rem;
+    margin-top: 5px;
+  }
+  .Fonctionnement span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 5px;
+  }
+  .restaurants {
+    background-color: #f6f6f6;
+    padding: 10px;
+  }
+  .carte {
+    width: 97%;
+    height: 290px;
+    margin-left: 20px;
+    -webkit-box-shadow: 2px 2px 5px 2px #dddddd;
+            box-shadow: 2px 2px 5px 2px #dddddd;
+    border-radius: 20px;
+    background-color: white;
+    margin-left: 5px;
+    position: relative;
+  }
+  .carte img {
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .carte figcaption {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    padding: 10px;
+  }
+  .carte figcaption p {
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    margin-top: -15px;
+  }
+  .carte figcaption i {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    margin-top: 25px;
+    margin-left: 60%;
+    font-size: 2rem;
+  }
+  .carte figcaption .contenair-heart:hover .like1 {
+    opacity: 1;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .carte figcaption .contenair-heart:hover .like {
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .carte figcaption .contenair-heart .like {
+    opacity: 0.8;
+  }
+  .carte figcaption .contenair-heart .like1 {
+    font-size: 1.9rem;
+    margin: auto;
+    margin-left: -31px;
+    color: #b659be;
+    opacity: 0;
+  }
+  .carte .etiquette {
+    background-color: #99e2d0;
+    width: 30%;
+    text-align: center;
+    padding: 10px;
+    margin-left: 60%;
+    position: absolute;
+    color: green;
+    font-weight: bold;
+    font-family: sans-serif;
+    border-radius: 5px;
+  }
+  footer {
+    width: 100%;
+    background-color: #2e2727;
+    color: white;
+    padding-bottom: 20px;
+  }
+  footer h3 {
+    padding: 40px;
+    margin-bottom: -30px;
+    font-family: "Shrikhand", cursive;
+  }
+  footer li {
+    list-style-type: none;
+    line-height: 25px;
+  }
+  footer a {
+    color: white;
+  }
+  footer i {
+    margin-right: 10px;
+  }
+}
+
+/* animation du loader avant le chargement de la page*/
+.spinloader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 120h;
+  padding-top: 120%;
+  position: absolute;
+  background-color: white;
+  -webkit-animation: loader 3s ease-in-out forwards;
+          animation: loader 3s ease-in-out forwards;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* retarde l'affichage de la page */
+.page {
+  -webkit-animation: home 0.5s backwards;
+          animation: home 0.5s backwards;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+@-webkit-keyframes home {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes home {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 767px) {
+  h3 {
+    text-align: center;
+  }
+  .etapes {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .Fonctionnement {
+    width: 40%;
+    margin-right: 15px;
+  }
+  .onglets_cartes {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  .carte {
+    width: 90%;
+    margin-left: 20px;
+  }
+  .carte1 {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+  }
+  .carte2 {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+  }
+  footer {
+    text-align: center;
+  }
+  footer h3 {
+    margin-left: 40px;
+  }
+  .spinloader {
+    padding-top: 70%;
+  }
+}
+
+/*Version desktop*/
+@media (min-width: 1024px) {
+  .etapes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .Fonctionnement {
+    width: 25%;
+  }
+  .spinloader {
+    padding-top: 50%;
+  }
+}
+/*# sourceMappingURL=fichier.css.map */

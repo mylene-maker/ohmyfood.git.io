@@ -1,0 +1,350 @@
+$couleurprimaire: #9356dc;
+$couleursecondaire: #ff79da;
+$couleurterciaire: #99e2d0;
+$couleurfond: #f6f6f6;
+$ombres-box: #dddddd;
+$border: 1px solid white;
+
+/* Media query smarthpone*/
+$breackpoint: 320px;
+$media-mobile: only screen and
+  (
+    min-width: $breackpoint,
+  );
+
+/* Media query tablette*/
+$breackpoint-2: 767px;
+$media-tablette: only screen and
+  (
+    min-width: $breackpoint-2,
+  );
+
+/* Media query desktop*/
+$breackpoint-3: 1024px;
+$media-desktop: only screen and
+  (
+    min-width: $breackpoint-3,
+  );
+
+.element_central {
+  text-align: center;
+}
+
+@media #{$media-mobile} {
+  body {
+    width: 100%;
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+
+    img {
+      object-fit: cover;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    h2 {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    h3 {
+      font-size: 1.5rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    h4 {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+  header {
+    img {
+      width: 50%;
+      padding: 20px;
+    }
+  }
+  .map {
+    background-color: darken($couleurfond, 10);
+    display: flex;
+    justify-content: center;
+    margin-top: -10px;
+    margin: 0px;
+    padding: 20px;
+    box-shadow: inset 0 3px 5px -5px #2c2c2c;
+
+    i {
+      margin-right: 20px;
+    }
+  }
+  .presentation {
+    background-color: $couleurfond;
+    padding: 20px;
+    position: relative;
+    button {
+      border: 1px solid white;
+      border-radius: 40px;
+      background: linear-gradient($couleurprimaire, $couleursecondaire);
+      color: white;
+      padding: 20px;
+
+      &:hover {
+        background: linear-gradient(#ed88e0, #a16be0);
+      }
+    }
+  }
+
+  .contenair_fonctionnement {
+    margin-left: 10px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+  .etapes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .Fonctionnement {
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px 2px $ombres-box;
+    background-color: $couleurfond;
+    display: flex;
+    justify-content: space-between;
+    width: 82%;
+    padding: 20px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    position: relative;
+
+    &:hover {
+      background-image: linear-gradient(
+        to right,
+        rgba(201, 171, 238, 0.2),
+        rgba(147, 86, 220, 0.2)
+      );
+    }
+    &:hover i {
+      color: $couleurprimaire;
+    }
+
+    .numero {
+      border: 1px solid white;
+      border-radius: 50px;
+      background-color: $couleurprimaire;
+      padding: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      color: white;
+      margin-left: -35px;
+      margin-top: -3px;
+    }
+
+    i {
+      color: gray;
+      font-size: 1.2rem;
+      margin-top: 5px;
+    }
+
+    span {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-top: 5px;
+    }
+  }
+
+  .restaurants {
+    background-color: $couleurfond;
+    padding: 10px;
+  }
+
+  .carte {
+    width: 97%;
+    height: 290px;
+    margin-left: 20px;
+    box-shadow: 2px 2px 5px 2px $ombres-box;
+    border-radius: 20px;
+    background-color: white;
+    margin-left: 5px;
+    position: relative;
+
+    img {
+      width: 100%;
+      border-radius: 20px 20px 0px 0px;
+    }
+    figcaption {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      padding: 10px;
+
+      p {
+        grid-row-start: 2;
+        margin-top: -15px;
+      }
+      i {
+        grid-column-start: 2;
+        margin-top: 25px;
+        margin-left: 60%;
+        font-size: 2rem;
+      }
+      .contenair-heart {
+        &:hover .like1 {
+          opacity: 1;
+          transition: 0.5s;
+        }
+        &:hover .like {
+          opacity: 0;
+          transition: 0.5s;
+        }
+
+        .like {
+          opacity: 0.8;
+        }
+        .like1 {
+          font-size: 1.9rem;
+          margin: auto;
+          margin-left: -31px;
+          color: rgb(182, 89, 190);
+          opacity: 0;
+        }
+      }
+    }
+
+    .etiquette {
+      background-color: $couleurterciaire;
+      width: 30%;
+      text-align: center;
+      padding: 10px;
+      margin-left: 60%;
+      position: absolute;
+      color: green;
+      font-weight: bold;
+      font-family: sans-serif;
+      border-radius: 5px;
+    }
+  }
+
+  footer {
+    width: 100%;
+    background-color: rgb(46, 39, 39);
+    color: white;
+    padding-bottom: 20px;
+
+    h3 {
+      padding: 40px;
+      margin-bottom: -30px;
+      font-family: "Shrikhand", cursive;
+    }
+    li {
+      list-style-type: none;
+      line-height: 25px;
+    }
+    a {
+      color: white;
+    }
+    i {
+      margin-right: 10px;
+    }
+  }
+}
+
+/* animation du loader avant le chargement de la page*/
+
+.spinloader {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 120h;
+  padding-top: 120%;
+  position: absolute;
+  background-color: white;
+  animation: loader 3s ease-in-out forwards;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* retarde l'affichage de la page */
+.page {
+  animation: home 0.5s backwards;
+  animation-delay: 2.5s;
+}
+
+@keyframes home {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media #{$media-tablette} {
+  h3 {
+    text-align: center;
+  }
+
+  .etapes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .Fonctionnement {
+    width: 40%;
+    margin-right: 15px;
+  }
+
+  .onglets_cartes {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .carte {
+    width: 90%;
+    margin-left: 20px;
+  }
+  .carte1 {
+    grid-column-start: 1;
+  }
+  .carte2 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+  footer {
+    text-align: center;
+
+    h3 {
+      margin-left: 40px;
+    }
+  }
+  .spinloader{
+    padding-top: 70%;
+  }
+}
+
+/*Version desktop*/
+
+@media #{$media-desktop} {
+  .etapes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .Fonctionnement {
+    width: 25%;
+  }
+  .spinloader{
+    padding-top: 50%;
+  }
+}
